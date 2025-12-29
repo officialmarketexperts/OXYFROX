@@ -12,14 +12,8 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 
-/* ================= BACKGROUND ================= */
 body{
     min-height:100vh;
     background:radial-gradient(circle at top,#1e1b4b,#020617 75%);
@@ -43,7 +37,7 @@ body{
     to{transform:translateY(-130vh);}
 }
 
-/* ================= CARD ================= */
+/* CARD */
 .card{
     position:relative;
     width:92%;
@@ -56,8 +50,6 @@ body{
     box-shadow:0 55px 120px rgba(0,0,0,0.75);
     overflow:hidden;
 }
-
-/* ANIMATED BORDER */
 .card::before{
     content:"";
     position:absolute;
@@ -72,53 +64,31 @@ body{
     to{transform:translateX(100%);}
 }
 
-/* ================= LOGO ================= */
+/* LOGO */
 .logo-wrap{
-    width:120px;
-    height:120px;
+    width:120px;height:120px;
     margin:0 auto 22px;
     border-radius:28px;
     padding:6px;
     background:linear-gradient(145deg,#0f172a,#020617);
     box-shadow:0 0 60px rgba(250,204,21,0.85);
-    position:relative;
-    z-index:1;
 }
-
 .logo-inner{
-    width:100%;
-    height:100%;
+    width:100%;height:100%;
     border-radius:22px;
     background:#fff;
     display:flex;
     align-items:center;
     justify-content:center;
 }
+.logo-inner img{width:82%;}
 
-.logo-inner img{
-    width:82%;
-}
+/* TITLE */
+h1{font-size:26px;font-weight:700;color:#fff;margin-bottom:6px;}
+.sub{font-size:14px;color:#c7d2fe;margin-bottom:28px;}
 
-/* ================= TITLE ================= */
-h1{
-    font-size:26px;
-    font-weight:700;
-    color:#fff;
-    margin-bottom:6px;
-}
-
-.sub{
-    font-size:14px;
-    color:#c7d2fe;
-    margin-bottom:28px;
-}
-
-/* ================= FEATURES ================= */
-.features{
-    text-align:left;
-    margin-bottom:36px;
-}
-
+/* FEATURES */
+.features{text-align:left;margin-bottom:36px;}
 .feature{
     display:flex;
     align-items:center;
@@ -127,7 +97,6 @@ h1{
     margin-bottom:16px;
     color:#e5e7eb;
 }
-
 .feature i{
     color:#facc15;
     font-size:18px;
@@ -138,7 +107,7 @@ h1{
     50%{transform:translateY(-4px);}
 }
 
-/* ================= CTA BUTTON ================= */
+/* CTA BUTTON */
 .telegram-btn{
     width:100%;
     padding:16px;
@@ -155,99 +124,96 @@ h1{
     gap:12px;
     box-shadow:0 18px 45px rgba(250,204,21,0.65);
     animation:fastZoom 0.8s ease-in-out infinite;
-    transition:0.2s;
 }
-
-/* FAST ZOOM IN-OUT */
 @keyframes fastZoom{
     0%{transform:scale(1);}
     50%{transform:scale(1.08);}
     100%{transform:scale(1);}
 }
+.telegram-btn:active{transform:scale(0.95);}
+.telegram-btn i{font-size:20px;}
 
-/* PRESS EFFECT */
-.telegram-btn:active{
-    transform:scale(0.95);
-}
+/* RATING */
+.stars{margin:26px 0 10px;color:#facc15;}
+.rating{font-size:13px;color:#c7d2fe;margin-bottom:18px;}
 
-.telegram-btn i{
-    font-size:20px;
-}
-
-/* ================= RATING ================= */
-.stars{
-    margin:26px 0 10px;
-    color:#facc15;
-}
-
-.rating{
-    font-size:13px;
-    color:#c7d2fe;
-    margin-bottom:18px;
-}
-
-/* ================= DISCLAIMER ================= */
+/* DISCLAIMER */
 .disclaimer{
     font-size:11.5px;
     color:#94a3b8;
     line-height:1.6;
 }
 </style>
+
+<!-- ================= META PIXEL (RESTORED) ================= -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init','848758444744237');
+fbq('track','PageView');
+</script>
+
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=848758444744237&ev=PageView&noscript=1"/>
+</noscript>
+<!-- ================= END META PIXEL ================= -->
+
 </head>
 
 <body>
 
-<!-- GOLD PARTICLES SCRIPT -->
+<!-- PARTICLES -->
 <script>
 for(let i=0;i<35;i++){
-    let p=document.createElement("div");
-    p.className="particle";
-    p.style.left=Math.random()*100+"vw";
-    p.style.animationDuration=(12+Math.random()*10)+"s";
-    document.body.appendChild(p);
+  let p=document.createElement("div");
+  p.className="particle";
+  p.style.left=Math.random()*100+"vw";
+  p.style.animationDuration=(12+Math.random()*10)+"s";
+  document.body.appendChild(p);
 }
 </script>
 
 <div class="card">
 
-    <!-- LOGO -->
     <div class="logo-wrap">
         <div class="logo-inner">
-            <img src="https://uploads.onecompiler.io/4479c7wrg/3x2zp2yd7/WhatsApp%20Image%202025-12-25%20at%2011.50.02.jpeg" alt="Stock Market Logo">
+            <img src="https://uploads.onecompiler.io/4479c7wrg/3x2zp2yd7/WhatsApp%20Image%202025-12-25%20at%2011.50.02.jpeg" alt="Stock Market">
         </div>
     </div>
 
     <h1>ELITE STOCK MARKET</h1>
     <div class="sub">Premium Trading & Market Education</div>
 
-    <!-- FEATURES -->
     <div class="features">
-        <div class="feature"><i class="fa-solid fa-chart-line"></i> Advanced Stock Market Education</div>
-        <div class="feature"><i class="fa-solid fa-signal"></i> Nifty • BankNifty • Equity Analysis</div>
-        <div class="feature"><i class="fa-solid fa-shield-halved"></i> Risk Management & Capital Safety</div>
-        <div class="feature"><i class="fa-solid fa-gem"></i> No Tips • No Hype • Only Strategy</div>
+        <div class="feature"><i class="fa-solid fa-chart-line"></i> Advanced Market Education</div>
+        <div class="feature"><i class="fa-solid fa-signal"></i> Nifty • BankNifty • Stocks</div>
+        <div class="feature"><i class="fa-solid fa-shield-halved"></i> Risk & Capital Protection</div>
+        <div class="feature"><i class="fa-solid fa-gem"></i> No Tips • Only Strategy</div>
     </div>
 
-    <!-- CTA -->
     <button class="telegram-btn" onclick="window.location.href='https://t.me/+ZcLOo7eWdjxiNjQ1'">
         <i class="fa-brands fa-telegram"></i>
         JOIN PREMIUM TELEGRAM
     </button>
 
-    <!-- RATING -->
     <div class="stars">
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
         <i class="fa-solid fa-star"></i>
     </div>
 
-    <div class="rating">Trusted by serious stock market traders</div>
+    <div class="rating">Trusted by serious traders</div>
 
-    <!-- DISCLAIMER -->
     <div class="disclaimer">
-        Educational purpose only. We do not provide tips or guarantees.<br>
+        Educational purpose only. No tips or guarantees.<br>
         Market investments are subject to risk.
     </div>
 
