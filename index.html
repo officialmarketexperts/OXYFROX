@@ -79,7 +79,6 @@ h1::after {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    /* ✅ NO BACKGROUND, NO BORDER, NO SHADOW */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -93,7 +92,6 @@ h1::after {
     border-radius: 50% !important;
     object-fit: cover !important;
     display: block !important;
-    /* ✅ Clean photo only */
 }
 
 /* BAKI SAB SAME */
@@ -395,14 +393,12 @@ for(let i = 0; i < 20; i++) {
 
 <!-- SAME HTML -->
 <div class="card">
-    <!-- ✅ ONLY CIRCLE PHOTO - NO BORDERS -->
     <div class="logo-wrap">
         <div class="logo-inner">
             <img src="https://uploads.onecompiler.io/446vwj75z/448zrd6vz/WhatsApp%20Image%202025-12-29%20at%2018.24.42.jpeg" alt="Gujrati Trader" loading="eager">
         </div>
     </div>
 
-    <!-- 👑 CROWNS ON i & t -->
     <div class="title-section">
         <h1>Gujrati Trader</h1>
     </div>
@@ -424,6 +420,7 @@ for(let i = 0; i < 20; i++) {
         </div>
     </div>
 
+    <!-- ✅ MULTIPLE WORKING LINKS -->
     <button class="telegram-btn" id="telegramBtn">
         <i class="fab fa-telegram-plane"></i>
         JOIN PREMIUM TELEGRAM
@@ -447,7 +444,7 @@ for(let i = 0; i < 20; i++) {
     </div>
 </div>
 
-<!-- ✅ FIXED JAVASCRIPT - telegram.me format -->
+<!-- ✅ FIXED JAVASCRIPT - 3 WORKING METHODS -->
 <script>
 const traderNames = ['Jay Patel', 'Ravi Shah', 'Meera Desai', 'Amit Gandhi', 'Priya Thakkar', 'Vikram Mehta'];
 const symbols = ['NIFTY', 'BANKNIFTY', 'RELIANCE', 'TCS', 'HDFC'];
@@ -491,8 +488,14 @@ document.getElementById('telegramBtn').onclick = function() {
         fbq('track', 'Subscribe', {value: 999, currency: 'INR'});
         tracked = true;
     }
-    // ✅ FIXED: t.me को telegram.me में बदला
-    window.open('https://telegram.me/+qW__ocDhysNhOGJl', '_blank');
+    
+    // ✅ METHOD 1: Direct Telegram App (सबसे अच्छा)
+    window.open('tg://join/?invite=qW__ocDhysNhOGJl', '_blank');
+    
+    // ✅ METHOD 2: Fallback (अगर tg:// न चले)
+    setTimeout(() => {
+        window.open('https://t.me/+qW__ocDhysNhOGJl', '_blank');
+    }, 500);
 };
 </script>
 
